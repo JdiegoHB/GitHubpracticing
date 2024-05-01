@@ -1,0 +1,147 @@
+:root{
+    --ablue: #0f1c30;
+    --bblue: #304a6e;
+    --cblue: #668dc0;
+    --dblue: #a1bbef;
+    --color-gray: #c2c6ce;
+}
+body{
+    font-family: sans-serif;
+    color: white;
+}
+p{
+font-size: 110%;
+}
+.main, .cards, .tarjetausuarios {
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px gray;
+}
+.main{
+    margin-left: 5vw;
+    margin-top: 20px;
+    padding: 2vw;
+    width: 90vw;
+    background-color: var(--cblue);
+}
+.navbar-button{
+    background-color: transparent;
+border-color: transparent;
+}
+.inputs {
+    margin: 10px 0px;
+    width: 80%;
+    background-color: #404668;
+    transition: 1s;
+    border: transparent;
+    color: white;
+    padding:5px ;
+    height: 40px;
+}
+.inputs:hover{
+    margin: 10px 0px;
+    transition: 1s;
+    background-color: var(--dblue);
+    color: black;
+    border: transparent;
+    padding:5px ;
+    height: 40px;
+}
+.Canvasbar{
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+.imagenes{
+    width: 30%;
+    display: inline-flex;
+    border-radius: 50px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    margin-right: 10%;
+}
+.idusuarios{
+    margin-left: 80%;
+}
+/* ------------------------------ */
+.bloks-{
+    width: 85vw;
+    display: inline-flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    .bloks-{
+        display: block;
+        width: 100%;
+    } 
+}
+/* ------------------------------ */
+.bloks-usuarios{
+    width: 85vw;
+margin-left: -1.1vw; 
+}
+@media (max-width: 768px) {
+    .bloks-usuarios {
+        margin-left: 0; 
+    }
+  }
+/* ------------------------------ */
+.tarjetausuarios {
+    margin-top: 2%;
+    margin-left: 3%;
+    background-color: var(--ablue);
+    display: inline-block;
+    color: white;
+    padding: 2vw;
+    width: 25vw;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .tarjetausuarios {
+      width: 80%;
+      margin-left: 10%; /* Cambia el ancho a 80% y el margen izquierdo a 10% cuando el ancho de la pantalla es igual o menor a 768px */
+    }
+  }
+/* ------------------------------ */
+  .cards{
+display: flex;
+justify-content: space-evenly;
+background-color: var(--ablue);
+color: white;
+padding: 2vw;
+width: 25vw;
+height: auto;
+}
+
+@media (max-width: 768px) {
+    .cards{
+        width: 80%;
+      margin-left: 10%;
+      margin-bottom: 2%;
+    } 
+}
+
+.counter-card{
+display: flex;
+}
+@media (max-width:768px) {
+    .counter-card{
+        display: block;
+    }
+}
+  
+.ImgSlider{
+margin-left: 37%;
+border-radius: 500px;
+}
+@media (max-width:768px) {
+    .ImgSlider{
+        margin-left: 10%;
+    }
+}
+.nombres{
+    color: black;
+}
+.direccion{
+    margin-bottom: 0px;
+}
