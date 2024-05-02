@@ -8,7 +8,7 @@ import * as yup from "yup";
 import { Arays } from "./Arays";
 import { useState } from "react";
 
-export default function FormExample() {
+export default function FormExample({ createUser }) {
   const { Formik } = formik;
   var link = "https://robohash.org/";
   const [usuarios, setUsuarios] = useState(Arays);
@@ -49,6 +49,7 @@ export default function FormExample() {
           },
           img: imgvar,
         };
+        createUser(infoForm);
         setUsuarios([...usuarios, infoForm]);
         Arays.push(infoForm);
         console.log(usuarios);

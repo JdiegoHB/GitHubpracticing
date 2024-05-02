@@ -1,6 +1,6 @@
 import "./components/styles/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Samples from "./components/Samples.jsx";
 import Sumaresta from "./components/Sumaresta.jsx";
@@ -11,12 +11,24 @@ import Tablausuarios from "./components/Tablausuarios.jsx";
 import Slider from "./components/Slider.jsx";
 import AlertForm from './components/AlertForm.jsx'
 import Forumario from './components/Forumario.jsx'
+import { Arays, Arays as data } from './components/Arays.jsx'
 
 
 <Forumario newUser/>
 function App() {
-  const [ arreglo, setarreglo] = useState()
+  const [ tasks, setTasks] = useState();
   
+  useEffect(() => {
+    setTasks(data);
+  }, [])
+  function createUser(newTask) {
+    if (newTask.address && newTask.address.country && newTask.address.state && newTask.address.city && newTask.address.house) {
+      setTasks([...Arays, newTask]);
+      alert("Usuario agregado correctamente");
+    } else {
+      alert("El usuario debe tener una dirección completa");
+    }
+  }
   return (
     <div className="App">
       <div className="main">
@@ -31,7 +43,7 @@ function App() {
         <div className="bloks-usuarios">
           <details>
             <summary>Usuarios</summary>
-            <Tablausuarios />
+            <Tablausuarios tasks={tasks}/>
           </details>
         </div>
         <div>
@@ -39,7 +51,7 @@ function App() {
         </div>
         <br></br>
         <div className="bloks-">
-          <AlertForm/>
+          <AlertForm createUser={createUser}/>
         </div>
       </div>
     </div>
