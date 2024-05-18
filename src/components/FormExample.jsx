@@ -1,3 +1,4 @@
+/*Probando commit*/
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -39,13 +40,13 @@ export default function FormExample({ createUser }) {
         var infoForm = {
           id: Arays.length,
           name: nameimp,
-          last: lastimp,
+          lastName: lastimp,
           username: userimp,
-          adress: {
-            Country: Countryimp,
+          address: {
+            country: Countryimp,
             state: stateimp,
             city: cityimp,
-            zip: zipimp,
+            house: zipimp,
           },
           img: imgvar,
         };

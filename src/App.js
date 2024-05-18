@@ -1,3 +1,4 @@
+/*Probando commit*/
 import "./components/styles/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
@@ -22,12 +23,7 @@ function App() {
     setTasks(data);
   }, [])
   function createUser(newTask) {
-    if (newTask.address && newTask.address.country && newTask.address.state && newTask.address.city && newTask.address.house) {
-      setTasks([...Arays, newTask]);
-      alert("Usuario agregado correctamente");
-    } else {
-      alert("El usuario debe tener una dirección completa");
-    }
+    setTasks([...Arays, newTask]);
   }
   return (
     <div className="App">
@@ -41,10 +37,8 @@ function App() {
           <Samples />
         </div>
         <div className="bloks-usuarios">
-          <details>
-            <summary>Usuarios</summary>
+            Usuarios
             <Tablausuarios tasks={tasks}/>
-          </details>
         </div>
         <div>
           <Slider />

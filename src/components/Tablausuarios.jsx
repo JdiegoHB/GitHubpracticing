@@ -1,3 +1,4 @@
+/*Probando commit*/
 import React, { useState } from "react";
 import { Arays } from "./Arays";
 import FormExample from "./FormExample";
@@ -28,10 +29,10 @@ export default function Tablausuarios() {
           <br />
           <p className="direccion">Direccion:</p>
           <ul>
-            <li>{usuario.address && usuario.address.country}</li>
-            <li>{usuario.address && usuario.address.state}</li>
-            <li>{usuario.address && usuario.address.city}</li>
-            <li>{usuario.address && usuario.address.house}</li>
+            <li>{usuario.address.country}</li>
+            <li>{usuario.address.state}</li>
+            <li>{usuario.address.city}</li>
+            <li>{usuario.address.house}</li>
           </ul>
         </div>
       ))}
